@@ -6,7 +6,7 @@ import star from "../../../../assets/star";
 import open from "../../../../assets/open";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component.js";
-
+import { Favourite } from "../../../components/favourites/favourite.component.js";
 import {
   Icon,
   RestaurantCard,
@@ -31,10 +31,10 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     placeId,
   } = restaurant;
   const ratingArray = Array.from(new Array(Math.ceil(rating)));
-  // console.log(ratingArray);
+
   return (
     <RestaurantCard elevation={5} style={styles.card}>
-      {/* <Card.Cover key={name} style={styles.cover} source={{ uri: photos[0] }} /> */}
+      <Favourite restaurant={restaurant} />
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
