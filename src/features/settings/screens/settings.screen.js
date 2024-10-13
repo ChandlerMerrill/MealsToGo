@@ -10,6 +10,7 @@ import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
+import { colors } from "../../../infrastructure/theme/colors";
 
 const SettingsItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
@@ -42,7 +43,7 @@ export const SettingsScreen = ({ navigation }) => {
             <Avatar.Image
               size={180}
               source={{ uri: photo }}
-              backgroundColor="#2182BD"
+              backgroundColor={colors.brand.primary}
             />
           )}
         </TouchableOpacity>

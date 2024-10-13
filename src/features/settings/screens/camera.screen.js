@@ -29,7 +29,7 @@ export const CameraScreen = ({ navigation }) => {
       AsyncStorage.setItem(`${user.uid}-photo`, photo.uri);
       navigation.goBack();
     } else {
-      console.log("bitch");
+      console.log("snap function failed");
     }
   };
   const toggleCameraFacing = () => {
